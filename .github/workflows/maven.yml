@@ -16,7 +16,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    #- name: Deploy to tomcat
-     # run: curl -v -u admin:admin -T /home/runner/work/ansible_deploy_tomcat/ansible_deploy_tomcat/target/WebApp-pipeline.war 'ec2-65-1-92-171.ap-south-1.compute.amazonaws.com:8080//manager/text/deploy?path=/web_aapp'
+    - name: Deploy to tomcat
+      run: curl -v -u admin:admin -T /home/runner/work/tomcat_maven_deployement/tomcat_maven_deployement/target/WebApp-pipeline.war 'ec2-44-203-167-138.compute-1.amazonaws.com:8080//manager/text/deploy?path=/web_aap'
 
 
